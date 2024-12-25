@@ -1,0 +1,293 @@
+@extends('frontend.master')
+@section('home')
+
+<!-- ================================
+    START BREADCRUMB AREA
+================================= -->
+<section class="breadcrumb-area py-5 bg-white pattern-bg">
+    <div class="container">
+        <div class="breadcrumb-content">
+            <div class="media media-card align-items-center pb-4">
+                <div class="media-img media--img media-img-md rounded-full">
+                    <img class="rounded-full" src="{{ (!empty($instructor->photo)) ? url('upload/instructor_images/'.$instructor->photo) : url('upload/no_image.jpg')}}" alt="Student thumbnail image">
+                </div>
+                <div class="media-body">
+                    <h2 class="section__title fs-30">{{ $instructor->name }}</h2>
+                    <p class="card-text pb-3">{{ $instructor->username }}</p>
+                    <div class="rating-wrap d-flex align-items-center">
+                        <div class="review-stars">
+                            <span class="rating-number">4.4</span>
+                            <span class="la la-star"></span>
+                            <span class="la la-star"></span>
+                            <span class="la la-star"></span>
+                            <span class="la la-star"></span>
+                            <span class="la la-star-o"></span>
+                        </div>
+                        <span class="rating-total pl-1">(275 Avis)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ================================
+       START TEACHER DETAILS AREA
+================================= -->
+<section class="teacher-details-area pt-50px">
+    <div class="bg-gray py-5">
+        <div class="container">
+            <div class="col-lg-12">
+                <div class="card shadow-sm mb-4 rounded">
+                    <div class="card-body">
+                        <h3 class="fs-22 font-weight-semi-bold pb-3">À propos</h3>
+                        <p class="card-text" id="aboutText" style="max-height: 3.5em; overflow: hidden; transition: max-height 0.3s ease;">
+                            {{ $instructor->about_prof }}
+                        </p>
+                        <a href="#" class="collapse-btn text-danger" id="aboutToggle">Lire plus</a>
+                    </div>
+                </div>
+
+                <div class="card shadow-sm mb-4 rounded">
+                    <div class="card-body">
+                        <h3 class="fs-22 font-weight-semi-bold pb-3">Expérience</h3>
+                        <p class="card-text" id="experienceText" style="max-height: 3.5em; overflow: hidden; transition: max-height 0.3s ease;">
+                            {{ $instructor->experience }}
+                        </p>
+                        <a href="#" class="collapse-btn text-danger" id="experienceToggle">Lire plus</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ================================
+       START COURSE AREA
+================================= -->
+@php  
+    $coursesA = App\Models\Course::where('instructor_id', $instructor->id)
+                                ->where('status', 1)
+                                ->orderBy('id', 'DESC')
+                                ->limit(6)
+                                ->get();  
+@endphp  
+
+<section class="course-area pb-120px">
+    <div class="container">
+        <div class="section-heading d-flex align-items-center justify-content-between pb-4">
+            <h3 class="section__title">Mes cours</h3>
+            <span class="ribbon ribbon-lg">{{ count($coursesA) }}</span>
+        </div>
+        <div class="divider"><span></span></div>
+        
+        <div class="row">
+            @foreach ($coursesA as $course)
+            <div class="col-lg-4 responsive-column-half">
+                <div class="card card-item card-preview" data-tooltip-content="#tooltip_content_1{{ $course->id }}">
+                    <div class="card-image">
+                        <a href="{{ url('course/details/'.$course->id.'/'.$course->course_name_slug) }}" class="d-block">
+                            <img class="card-img-top lazy" src="{{ asset($course->course_image) }}" data-src="{{ asset($course->course_image) }}" alt="Card image cap">
+                        </a>
+                        @php
+                            $amount = $course->selling_price - $course->discount_price;
+                            $discount = ($amount/$course->selling_price) * 100;
+                        @endphp
+                        <div class="course-badge-labels">
+                            @if ($course->bestseller == 1)
+                                <div class="course-badge">Meilleure Vente</div>
+                            @endif
+                            @if ($course->highestrated == 1)
+                                <div class="course-badge sky-blue">Le Mieux Noté</div>
+                            @endif
+                            @if ($course->discount_price == NULL)
+                                <div class="course-badge blue">Nouveau</div>
+                            @else
+                                <div class="course-badge blue">{{ round($discount) }}%</div>
+                            @endif
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <h6 class="ribbon ribbon-blue-bg fs-14 mb-3">
+                            @if ($course->label == 'Begginer')
+                                Débutant
+                            @elseif ($course->label == 'Middle')
+                                Intermédiaire
+                            @elseif ($course->label == 'Advance')
+                                Avancé
+                            @else
+                                {{ $course->label }}
+                            @endif
+                        </h6>
+                        <h5 class="card-title"><a href="{{ url('course/details/'.$course->id.'/'.$course->course_name_slug) }}">{{ $course->course_name }}</a></h5>
+                        <p class="card-text"><a href="{{ route('instructor.details',$course->instructor_id) }}">{{ $course['user']['name'] }}</a></p>
+                        <div class="rating-wrap d-flex align-items-center py-2">
+                            <div class="review-stars">
+                                <span class="rating-number">4.4</span>
+                                <span class="la la-star"></span>
+                                <span class="la la-star"></span>
+                                <span class="la la-star"></span>
+                                <span class="la la-star"></span>
+                                <span class="la la-star-o"></span>
+                            </div>
+                            <span class="rating-total pl-1">(20,230)</span>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center">
+                            @if ($course->discount_price == NULL)
+                                <p class="card-price text-black font-weight-bold">{{ $course->selling_price }} DH</p>
+                            @else
+                                <p class="card-price text-black font-weight-bold">{{ $course->discount_price }} DH
+                                    <span class="before-price font-weight-medium">{{ $course->selling_price }} DH</span>
+                                </p>
+                            @endif
+                            <button class="btn btn-outline-primary btn-sm rounded-pill" 
+                                    onclick="addToCart({{$course->id}}, '{{$course->course_name}}', '{{$course->instructor_id}}', '{{$course->course_name_slug}}')">
+                                <i class="la la-shopping-cart mr-1"></i>Acheter
+                            </button>
+                            <div class="icon-element icon-element-sm shadow-sm cursor-pointer" 
+                                 title="Add to Wishlist"
+                                 id="{{ $course->id }}"
+                                 onclick="addToWishList(this.id)">
+                                <i class="la la-heart-o"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            @endforeach
+        </div>
+    </div>
+</section>
+
+@endsection
+
+<style>
+/* Styles pour les sections À propos et Expérience */
+.card {
+    border: none;
+    border-radius: 8px;
+    background: #fff;
+    margin-bottom: 30px;
+}
+
+.card-body {
+    padding: 2rem;
+}
+
+.collapse-btn {
+    display: inline-block;
+    margin-top: 1rem;
+    color: #EC5252;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.collapse-btn:hover {
+    color: #d63030;
+    text-decoration: none;
+}
+
+/* Style pour la section Mes cours */
+.section-heading {
+    margin-bottom: 20px;
+}
+
+.section__title {
+    font-size: 24px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.ribbon.ribbon-lg {
+    padding: 5px 15px;
+    font-size: 14px;
+    background-color: #EC5252;
+    color: #fff;
+    border-radius: 20px;
+}
+
+.divider {
+    height: 1px;
+    background-color: #e9ecef;
+    margin-bottom: 30px;
+}
+
+/* Styles pour les cartes de cours */
+.card-preview {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-preview .card-body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-preview .card-body .d-flex {
+    margin-top: auto;
+}
+
+.btn-outline-primary {
+    color: #EC5252;
+    border-color: #EC5252;
+}
+
+.btn-outline-primary:hover {
+    background-color: #EC5252;
+    color: #fff;
+}
+
+.before-price {
+    text-decoration: line-through;
+    color: #999;
+    margin-left: 8px;
+    font-size: 0.9em;
+}
+
+/* Responsive */
+@media (max-width: 767px) {
+    .card-preview {
+        height: auto;
+    }
+}
+</style>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const aboutText = document.getElementById('aboutText');
+        const aboutToggle = document.getElementById('aboutToggle');
+        const experienceText = document.getElementById('experienceText');
+        const experienceToggle = document.getElementById('experienceToggle');
+
+        let isAboutExpanded = false;
+        let isExperienceExpanded = false;
+
+        aboutToggle.addEventListener('click', function(e) {
+            e.preventDefault();
+            if (!isAboutExpanded) {
+                aboutText.style.maxHeight = 'none';
+                aboutToggle.textContent = 'Lire moins';
+                isAboutExpanded = true;
+            } else {
+                aboutText.style.maxHeight = '3.5em';
+                aboutToggle.textContent = 'Lire plus';
+                isAboutExpanded = false;
+            }
+        });
+
+        experienceToggle.addEventListener('click', function(e) {
+            e.preventDefault();
+            if (!isExperienceExpanded) {
+                experienceText.style.maxHeight = 'none';
+                experienceToggle.textContent = 'Lire moins';
+                isExperienceExpanded = true;
+            } else {
+                experienceText.style.maxHeight = '3.5em';
+                experienceToggle.textContent = 'Lire plus';
+                isExperienceExpanded = false;
+            }
+        });
+    });
+</script>
