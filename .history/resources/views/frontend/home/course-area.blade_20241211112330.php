@@ -1,1 +1,0 @@
-<a href="{{ url('course/details/'.$course->id.'/'.$course->course_name_slug) }}" class="d-block">
