@@ -4,7 +4,7 @@
             <div class="col-lg-3 responsive-column-half">
                 <div class="footer-item">
                     <a href="index.html">
-                        <img src="{{ asset('frontend/images/formation.jfif') }}" alt="footer logo" class="footer__logo" width="130" height="95" >
+                        <img src="{{ asset('frontend/images/OSRlogo.png') }}" alt="footer logo" class="footer__logo" width="180" height="180" >
                     </a>
                     <ul class="generic-list-item pt-4">
                         <li><a href="tel:+1631237884">+212 52299-6566</a></li>
@@ -26,7 +26,7 @@
                     <div class="divider border-bottom-0"><span></span></div>
                     <ul class="generic-list-item">
                         <li><a href="#">A propos</a></li>
-                        <li><a href="#">Qui Somme Nous</a></li>
+                        <li><a href="#">Qui Somme Nous ?</a></li>
                         <li><a href="#">Contactez-nous</a></li>
                         <li><a href="#">Support</a></li>
                         

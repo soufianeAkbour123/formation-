@@ -6,7 +6,7 @@
                         <div class="header-widget">
                             <ul class="generic-list-item d-flex flex-wrap align-items-center fs-14">
                                 <li class="d-flex align-items-center pr-3 mr-3 border-right border-right-gray"><i class="la la-phone mr-1"></i><a href="tel:00123456789"> +212 52299-6566</a></li>
-                                <li class="d-flex align-items-center"><i class="la la-envelope-o mr-1"></i><a href="mailto:contact@suptechnology.ma"> contact123@suptechnology.ma</a></li>
+                                <li class="d-flex align-items-center"><i class="la la-envelope-o mr-1"></i><a href="mailto:contact@suptechnology.ma"> contact@suptechnology.ma</a></li>
                             </ul>
                         </div><!-- end header-widget -->
                     </div><!-- end col-lg-6 -->
@@ -55,8 +55,9 @@
                         <div class="col-lg-2">
                             <div class="logo-box">
                      
-                                <a href="{{ url('/') }}" class="logo"><img src="{{ asset('frontend/images/formation.jfif') }}" alt="logo" width="130" height="95" ></a>
-                                <div class="user-btn-action">
+                            <a href="{{ url('/') }}" class="logo">
+    <img src="{{ asset('frontend/images/OSRlogo.png') }}" alt="logo" width="130" height="130">
+</a>                                <div class="user-btn-action"> 
                                     <div class="search-menu-toggle icon-element icon-element-sm shadow-sm mr-2" data-toggle="tooltip" data-placement="top" title="Search">
                                         <i class="la la-search"></i>
                                     </div>
@@ -102,13 +103,13 @@
         <nav class="main-menu">
             <ul>
                 <li>
-                    <a href="{{ url('/') }}">Home:  </a>
+                    <a href="{{ url('/') }}">Home </a>
                     
                 </li>
                
                 
                 <li>
-                    <a href="#">Qui Somme Nous   </a>
+                    <a href="#">Qui Somme Nous ?  </a>
                     
                 </li>
                 <li>
