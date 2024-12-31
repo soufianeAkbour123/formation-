@@ -63,7 +63,7 @@
 <body>
 <div style="max-width: 600px; margin: 0 auto; font-family: Arial, sans-serif; font-size: 16px; line-height: 1.5;">
     <div style="padding: 10px; text-align: center; border-radius: 8px;">
-        <img src="data:image/png;base64,{{ base64_encode(file_get_contents(public_path('backend/assets/images/formation.jfif'))) }}" alt="Logo Formation ++" style="width: auto; max-width: 150px; max-height: 100px; margin: 10px 0;">
+        <img src="data:image/png;base64,{{ base64_encode(file_get_contents(public_path('backend/assets/images/OSRlogo.png'))) }}" alt="Logo Formation ++" style="width: auto; max-width: 150px; max-height: 100px; margin: 10px 0;">
     </div>
 </div>
 

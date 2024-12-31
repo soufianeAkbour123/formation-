@@ -73,7 +73,7 @@
 <body>
 
 <div class="container">
-<img src="{{ asset('backend/assets/images/formation.jfif') }}" alt="LogoP" class="logoP">
+<img src="{{ asset('backend/assets/images/OSRlogo.png') }}" alt="LogoP" class="logoP">
     <p>Bonjour, <span class="bold">{{ $name }}</span>, votre reçu ne correspond pas à un reçu de paiement. Veuillez vérifier.</p>
 
     <div class="contact-info">
