@@ -182,7 +182,7 @@
                     </li>
                     <li>
                         <a href="{{ route('register') }}">
-                           Inscription
+                            <i class="la la-user-plus mr-1"></i>Inscription
                         </a>
                     </li>
                 @endauth

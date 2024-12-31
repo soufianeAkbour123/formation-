@@ -166,23 +166,23 @@
                 @auth
                     <li>
                         <a href="{{ route('dashboard') }}">
-                            Dashboard
+                            <i class="la la-user mr-1"></i>Dashboard
                         </a>
                     </li>
                     <li>
                         <a href="{{ route('user.logout') }}">
-                           Déconnexion
+                            <i class="la la-sign-out mr-1"></i>Déconnexion
                         </a>
                     </li>
                 @else
                     <li>
                         <a href="{{ route('login') }}">
-                           Connexion
+                            <i class="la la-sign-in mr-1"></i>Connexion
                         </a>
                     </li>
                     <li>
                         <a href="{{ route('register') }}">
-                           Inscription
+                            <i class="la la-user-plus mr-1"></i>Inscription
                         </a>
                     </li>
                 @endauth
