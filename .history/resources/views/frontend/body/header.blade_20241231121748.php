@@ -96,9 +96,7 @@
                             </div>
                         </div>
                     </div>
-                    @php
-    $categories = App\Models\Category::orderBy('category_name','ASC')->get();
-@endphp
+
                     <!-- Main Menu Area -->
                     <div class="col-lg-10">
                         <div class="menu-wrapper">
@@ -171,9 +169,7 @@
             </div>
         </div>
     </div>
-    @php
-    $categories = App\Models\Category::orderBy('category_name','ASC')->get();
-@endphp
+
     <!-- Mobile Menu -->
     <div class="off-canvas-menu custom-scrollbar-styled main-off-canvas-menu">
         <div class="off-canvas-menu-close main-menu-close icon-element icon-element-sm shadow-sm" data-toggle="tooltip" data-placement="left" title="Close menu">

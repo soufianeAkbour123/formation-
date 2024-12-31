@@ -96,9 +96,7 @@
                             </div>
                         </div>
                     </div>
-                    @php
-    $categories = App\Models\Category::orderBy('category_name','ASC')->get();
-@endphp
+
                     <!-- Main Menu Area -->
                     <div class="col-lg-10">
                         <div class="menu-wrapper">
