@@ -14,9 +14,9 @@
                 <li>Page</li>
                 <li>Caisse</li>
             </ul>
-        </div><!-- end breadcrumb-content -->
-    </div><!-- end container -->
-</section><!-- end breadcrumb-area -->
+        </div>
+    </div>
+</section>
 <!-- ================================ END BREADCRUMB AREA ================================ -->
 
 <!-- ================================ START CONTACT AREA ================================ -->
@@ -36,29 +36,29 @@
                                     <input class="form-control form--control" type="text" name="name" value="{{ Auth::user()->name }}">
                                     <span class="la la-user input-icon"></span>
                                 </div>
-                            </div><!-- end input-box -->
+                            </div>
                             <div class="input-box col-lg-6">
                                 <label class="label-text">Email</label>
                                 <div class="form-group">
                                     <input class="form-control form--control" type="email" name="email" value="{{ Auth::user()->email }}">
                                     <span class="la la-user input-icon"></span>
                                 </div>
-                            </div><!-- end input-box -->
+                            </div>
                             <div class="input-box col-lg-12">
                                 <label class="label-text">Adresse</label>
                                 <div class="form-group">
                                     <input class="form-control form--control" type="text" name="address" value="{{ Auth::user()->address }}">
                                     <span class="la la-envelope input-icon"></span>
                                 </div>
-                            </div><!-- end input-box -->
+                            </div>
                             <div class="input-box col-lg-12">
                                 <label class="label-text">Numéro de téléphone</label>
                                 <div class="form-group">
                                     <input id="phone" class="form-control form--control" type="tel" name="phone" value="{{ Auth::user()->phone }}">
                                 </div>
-                            </div><!-- end input-box -->
-                    </div><!-- end card-body -->
-                </div><!-- end card -->
+                            </div>
+                    </div>
+                </div>
 
                 <div class="card card-item">
                     <div class="card-body">
@@ -89,11 +89,11 @@
                                     <input id="cashPlus" name="cash_delivery" type="radio" value="cashplus" onchange="hideRibField()">
                                     <label for="cashPlus">Cash plus</label>
                                 </div>
-                            </div><!-- end payment-tab -->
+                            </div>
                         </div>
-                    </div><!-- end card-body -->
-                </div><!-- end card -->
-            </div><!-- end col-lg-7 -->
+                    </div>
+                </div>
+            </div>
 
             <div class="col-lg-5">
                 <div class="card card-item">
@@ -116,115 +116,68 @@
                                         <h5 class="fs-15 pb-2"><a href="{{ url('course/details/'.$item->id.'/'.$item->options->slug) }}">{{ $item->name }}</a></h5>
                                         <p class="text-black font-weight-semi-bold lh-18">{{ $item->price }} DHS</p>
                                     </div>
-                                </div><!-- end media -->
+                                </div>
                             @endforeach  
-                        </div><!-- end order-details-lists -->
+                        </div>
                         <a href="{{ route('mycart') }}" class="btn-text"><i class="la la-edit mr-1"></i>Modifier</a>
-                    </div><!-- end card-body -->
-                </div><!-- end card -->
+                    </div>
+                </div>
 
                 <div class="card card-item">
                     <div class="card-body">
                         <h3 class="card-title fs-22 pb-3">Résumé de la commande</h3>
                         <div class="divider"><span></span></div>
                         @if (Session::has('promo'))
-    <ul class="generic-list-item generic-list-item-flash fs-15">
-        <li class="d-flex align-items-center justify-content-between font-weight-semi-bold">
-            <span class="text-black">Sous-Total:</span>
-            <span>{{ $cartTotal }} DHS</span>
-        </li>
-        <li class="d-flex align-items-center justify-content-between font-weight-semi-bold">
-            <span class="text-black">Code Promo:</span>
-            <span>{{ session()->get('promo')['code'] }} ({{ session()->get('promo')['discount'] }}%)</span>
-        </li>
-        <li class="d-flex align-items-center justify-content-between font-weight-semi-bold">
-            <span class="text-black">Réduction :</span>
-            <span>{{ session()->get('promo')['discount_amount'] }} DHS</span>
-        </li>
-        <li class="d-flex align-items-center justify-content-between font-weight-bold">
-            <span class="text-black">Total:</span>
-            <span>{{ session()->get('promo')['total_amount'] }} DHS</span>
-        </li>
-    </ul>
-    <input type="hidden" name="total" value="{{ session()->get('promo')['total_amount'] }}">
-@else
-    <ul class="generic-list-item generic-list-item-flash fs-15">
-        <li class="d-flex align-items-center justify-content-between font-weight-bold">
-            <span class="text-black">Total:</span>
-            <span>{{ $cartTotal }} DHS</span>
-        </li>
-    </ul>
-    <input type="hidden" name="total" value="{{ $cartTotal }}">
-@endif 
+                        <ul class="generic-list-item generic-list-item-flash fs-15">
+                            <li class="d-flex align-items-center justify-content-between font-weight-semi-bold">
+                                <span class="text-black">Sous-Total:</span>
+                                <span>{{ $cartTotal }} DHS</span>
+                            </li>
+                            <li class="d-flex align-items-center justify-content-between font-weight-semi-bold">
+                                <span class="text-black">Code Promo:</span>
+                                <span>{{ session()->get('promo')['code'] }} ({{ session()->get('promo')['discount'] }}%)</span>
+                            </li>
+                            <li class="d-flex align-items-center justify-content-between font-weight-semi-bold">
+                                <span class="text-black">Réduction :</span>
+                                <span>{{ session()->get('promo')['discount_amount'] }} DHS</span>
+                            </li>
+                            <li class="d-flex align-items-center justify-content-between font-weight-bold">
+                                <span class="text-black">Total:</span>
+                                <span>{{ session()->get('promo')['total_amount'] }} DHS</span>
+                            </li>
+                        </ul>
+                        <input type="hidden" name="total" value="{{ session()->get('promo')['total_amount'] }}">
+                        @else
+                        <ul class="generic-list-item generic-list-item-flash fs-15">
+                            <li class="d-flex align-items-center justify-content-between font-weight-bold">
+                                <span class="text-black">Total:</span>
+                                <span>{{ $cartTotal }} DHS</span>
+                            </li>
+                        </ul>
+                        <input type="hidden" name="total" value="{{ $cartTotal }}">
+                        @endif 
                         <div class="btn-box border-top border-top-gray pt-3">
                             <p class="fs-14 lh-22 mb-2">Formation ++ est tenu par la loi de percevoir les taxes de transaction applicables pour les achats effectués dans certaines juridictions fiscales.</p>
                             <p class="fs-14 lh-22 mb-3">En complétant votre achat, vous acceptez ces <a href="#" class="text-color hover-underline">Conditions de service.</a></p>
                             <button type="button" class="btn theme-btn w-100" onclick="showReceiptField()">Procéder <i class="la la-arrow-right icon ml-1"></i></button>
-</div>
-<!-- Champ de téléchargement de reçu (caché par défaut) -->
-<div id="receiptField" style="display: none; margin-top: 15px;">
-    <label for="receipt" class="label-text"><strong>Téléchargez votre reçu :</strong></label>
-    <input type="file" id="receipt" name="receipt" class="form-control form--control" accept=".jpg,.jpeg,.png,.pdf" onchange="showSubmitButton()">
-</div>
+                        </div>
 
-<!-- Bouton Terminer (caché par défaut) -->
-<div id="submitButton" class="btn-box border-top border-top-gray pt-3" style="display: none;">
-    <button type="submit" class="btn theme-btn w-100">Terminer <i class="la la-check icon ml-1"></i></button>
-</div>
+                        <div id="receiptField" style="display: none; margin-top: 15px;">
+                            <label for="receipt" class="label-text"><strong>Téléchargez votre reçu :</strong></label>
+                            <input type="file" id="receipt" name="receipt" class="form-control form--control" accept=".jpg,.jpeg,.png,.pdf" onchange="showSubmitButton()">
+                        </div>
 
-<script type="text/javascript">
-    function applyPromo() {
-        var promo_name = $('#promo_name').val();
-        
-        if (!promo_name) {
-            Swal.fire({
-                toast: true,
-                position: 'top-end',
-                icon: 'error',
-                title: 'Veuillez entrer un code promo',
-                showConfirmButton: false,
-                timer: 3000
-            });
-            return;
-        }
+                        <div id="submitButton" class="btn-box border-top border-top-gray pt-3" style="display: none;">
+                            <button type="submit" class="btn theme-btn w-100">Terminer <i class="la la-check icon ml-1"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
-        $.ajax({
-            type: "POST",
-            dataType: 'json',
-            data: {
-                promo_name: promo_name,
-                _token: '{{ csrf_token() }}'
-            },
-            url: "{{ url('/promo-apply') }}",
-            success: function(data) {
-                if (data.validity === true) {
-                    location.reload();
-                } else {
-                    Swal.fire({
-                        toast: true,
-                        position: 'top-end',
-                        icon: 'error',
-                        title: data.error,
-                        showConfirmButton: false,
-                        timer: 3000
-                    });
-                }
-            }
-        });
-    }
-
-    function removePromo() {
-        $.ajax({
-            type: 'GET',
-            url: "{{ url('/promo-remove') }}",
-            dataType: 'json',
-            success: function(data) {
-                location.reload();
-            }
-        });
-    }
-
-    // Vos autres fonctions JavaScript existantes
+<script>
     function toggleRibField() {
         document.getElementById('ribField').style.display = 'block';
     }
@@ -255,8 +208,7 @@
         }
     }
 
-    // Initialisation au chargement de la page
-    document.addEventListener('DOMContentLoaded', (event) => {
+    document.addEventListener('DOMContentLoaded', () => {
         showReceiptField();
     });
 </script>

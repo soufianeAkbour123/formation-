@@ -5,7 +5,7 @@
                 <div class="row align-items-center">
                     <div class="col-lg-12">
                         <div class="logo-box logo--box">
-                        <a href="index.html" class="logo"><img src="{{ asset('frontend/images/Blue-and-Black-Modern-Digital-Technology-Logo-316x190.png') }}" alt="logo" width="160" height="90"></a>
+                        <a href="index.html" class="logo"><img src="{{ asset('frontend/images/OSRlogo.png') }}" alt="logo" width="140" height="140"></a>
                             <div class="user-btn-action">
                                 <div class="search-menu-toggle icon-element icon-element-sm shadow-sm mr-2" data-toggle="tooltip" data-placement="top" title="Search">
                                     <i class="la la-search"></i>
@@ -222,40 +222,40 @@
                              
                             <li>
                                 <a href="dashboard-settings.html">
-                                    <i class="la la-gear mr-1"></i> Settings
+                                    <i class="la la-gear mr-1"></i> Paramètres 
                                 </a>
                             </li>
                             <li>
                                 <a href="dashboard-purchase-history.html">
-                                    <i class="la la-history mr-1"></i> Purchase history
+                                    <i class="la la-history mr-1"></i> Historique des achats
                                 </a>
                             </li>
                             <li><div class="section-block"></div></li>
                             <li>
                                 <a href="student-detail.html">
-                                    <i class="la la-user mr-1"></i> Public profile
+                                    <i class="la la-user mr-1"></i> Profile Public
                                 </a>
                             </li>
                             <li>
                                 <a href="dashboard-settings.html">
-                                    <i class="la la-edit mr-1"></i> Edit profile
+                                    <i class="la la-edit mr-1"></i> Modifier profile
                                 </a>
                             </li>
                             <li><div class="section-block"></div></li>
                             <li>
                                 <a href="#">
-                                    <i class="la la-question mr-1"></i> Help
+                                    <i class="la la-question mr-1"></i> Aide
                                 </a>
                             </li>
                             <li>
                                 <a href="index.html">
-                                    <i class="la la-power-off mr-1"></i> Logout
+                                    <i class="la la-power-off mr-1"></i> Déconnexion
                                 </a>
                             </li>
                             <li><div class="section-block"></div></li>
                             <li>
                                 <a href="#" class="position-relative">
-                                    <span class="fs-17 font-weight-semi-bold d-block">Aduca for Business</span>
+                                    <span class="fs-17 font-weight-semi-bold d-block">Suptechnology</span>
                                     <span class="lh-20 d-block fs-14 text-gray">Bring learning to your company</span>
                                     <span class="position-absolute top-0 right-0 mt-3 mr-3 fs-18 text-gray">
                                     <i class="la la-external-link"></i>
@@ -284,26 +284,26 @@
         <ul class="generic-list-item off-canvas-menu-list pt-1 pb-2 border-bottom border-bottom-gray">
             <li><a href="#">Notifications</a></li>
             <li><a href="#">Messages</a></li>
-            <li><a href="#">Wishlist</a></li>
-            <li><a href="#">My cart</a></li>
+            <li><a href="#">Liste des favoris</a></li>
+            <li><a href="#">Mon panier</a></li>
         </ul>
-        <h4 class="off-canvas-menu-heading pt-20px">Account</h4>
+        <h4 class="off-canvas-menu-heading pt-20px">Compte</h4>
         <ul class="generic-list-item off-canvas-menu-list pt-1 pb-2 border-bottom border-bottom-gray">
-            <li><a href="#">Account settings</a></li>
+            <li><a href="#">Paramètres de compte</a></li>
             <li><a href="#">Historique des Formations</a></li>
         </ul>
         <h4 class="off-canvas-menu-heading pt-20px">Profile</h4>
         <ul class="generic-list-item off-canvas-menu-list pt-1 pb-2 border-bottom border-bottom-gray">
-            <li><a href="#">Public profile</a></li>
-            <li><a href="#">Edit profile</a></li>
-            <li><a href="#">Log out</a></li>
+            <li><a href="#">Profile public/a></li>
+            <li><a href="#">Modifier profile</a></li>
+            <li><a href="#">Déconnexion</a></li>
         </ul>
-        <h4 class="off-canvas-menu-heading pt-20px">More from Aduca</h4>
+        <h4 class="off-canvas-menu-heading pt-20px">More from Suptechnology</h4>
         <ul class="generic-list-item off-canvas-menu-list pt-1">
-            <li><a href="for-business.html">Aduca for Business</a></li>
+            <li><a href="for-business.html">Suptechnology</a></li>
             <li><a href="#">Get the app</a></li>
-            <li><a href="#">Invite friends</a></li>
-            <li><a href="#">Help</a></li>
+            <li><a href="#">Invité des amis</a></li>
+            <li><a href="#">Aide</a></li>
         </ul>
         <div class="theme-picker d-flex align-items-center justify-content-center mt-4 px-3">
             <button class="theme-picker-btn dark-mode-btn btn theme-btn-sm theme-btn-white w-100 font-weight-semi-bold justify-content-center" title="Dark mode">
@@ -332,129 +332,129 @@
         <div class="off-canvas-menu-close cat-menu-close icon-element icon-element-sm shadow-sm" data-toggle="tooltip" data-placement="left" title="Close menu">
             <i class="la la-times"></i>
         </div><!-- end off-canvas-menu-close -->
-        <h4 class="off-canvas-menu-heading pt-90px">Learn</h4>
-        <ul class="generic-list-item off-canvas-menu-list pt-1 pb-2 border-bottom border-bottom-gray">
-            <li><a href="my-courses.html">My learning</a></li>
+        <h4 class="off-canvas-menu-heading pt-90px">Apprendre</h4>
+<ul class="generic-list-item off-canvas-menu-list pt-1 pb-2 border-bottom border-bottom-gray">
+    <li><a href="my-courses.html">Mon apprentissage</a></li>
+</ul>
+<h4 class="off-canvas-menu-heading pt-20px">Catégories</h4>
+<ul class="generic-list-item off-canvas-menu-list pt-1">
+    <li>
+        <a href="course-grid.html">Développement</a>
+        <ul class="sub-menu">
+            <li><a href="#">Tout le Développement</a></li>
+            <li><a href="#">Développement Web</a></li>
+            <li><a href="#">Applications Mobiles</a></li>
+            <li><a href="#">Développement de Jeux</a></li>
+            <li><a href="#">Bases de Données</a></li>
+            <li><a href="#">Langages de Programmation</a></li>
+            <li><a href="#">Tests Logiciels</a></li>
+            <li><a href="#">Génie Logiciel</a></li>
+            <li><a href="#">Commerce Électronique</a></li>
         </ul>
-        <h4 class="off-canvas-menu-heading pt-20px">Categories</h4>
-        <ul class="generic-list-item off-canvas-menu-list pt-1">
-            <li>
-                <a href="course-grid.html">Development</a>
-                <ul class="sub-menu">
-                    <li><a href="#">All Development</a></li>
-                    <li><a href="#">Web Development</a></li>
-                    <li><a href="#">Mobile Apps</a></li>
-                    <li><a href="#">Game Development</a></li>
-                    <li><a href="#">Databases</a></li>
-                    <li><a href="#">Programming Languages</a></li>
-                    <li><a href="#">Software Testing</a></li>
-                    <li><a href="#">Software Engineering</a></li>
-                    <li><a href="#">E-Commerce</a></li>
-                </ul>
-            </li>
-            <li>
-                <a href="course-grid.html">business</a>
-                <ul class="sub-menu">
-                    <li><a href="#">All Business</a></li>
-                    <li><a href="#">Finance</a></li>
-                    <li><a href="#">Entrepreneurship</a></li>
-                    <li><a href="#">Strategy</a></li>
-                    <li><a href="#">Real Estate</a></li>
-                    <li><a href="#">Home Business</a></li>
-                    <li><a href="#">Communications</a></li>
-                    <li><a href="#">Industry</a></li>
-                    <li><a href="#">Other</a></li>
-                </ul>
-            </li>
-            <li>
-                <a href="course-grid.html">IT & Software</a>
-                <ul class="sub-menu">
-                    <li><a href="#">All IT & Software</a></li>
-                    <li><a href="#">IT Certification</a></li>
-                    <li><a href="#">Hardware</a></li>
-                    <li><a href="#">Network & Security</a></li>
-                    <li><a href="#">Operating Systems</a></li>
-                    <li><a href="#">Other</a></li>
-                </ul>
-            </li>
-            <li>
-                <a href="course-grid.html">Finance & Accounting</a>
-                <ul class="sub-menu">
-                    <li><a href="#"> All Finance & Accounting</a></li>
-                    <li><a href="#">Accounting & Bookkeeping</a></li>
-                    <li><a href="#">Cryptocurrency & Blockchain</a></li>
-                    <li><a href="#">Economics</a></li>
-                    <li><a href="#">Investing & Trading</a></li>
-                    <li><a href="#">Other Finance & Economics</a></li>
-                </ul>
-            </li>
-            <li>
-                <a href="course-grid.html">design</a>
-                <ul class="sub-menu">
-                    <li><a href="#">All Design</a></li>
-                    <li><a href="#">Graphic Design</a></li>
-                    <li><a href="#">Web Design</a></li>
-                    <li><a href="#">Design Tools</a></li>
-                    <li><a href="#">3D & Animation</a></li>
-                    <li><a href="#">User Experience</a></li>
-                    <li><a href="#">Other</a></li>
-                </ul>
-            </li>
-            <li>
-                <a href="course-grid.html">Personal Development</a>
-                <ul class="sub-menu">
-                    <li><a href="#">All Personal Development</a></li>
-                    <li><a href="#">Personal Transformation</a></li>
-                    <li><a href="#">Productivity</a></li>
-                    <li><a href="#">Leadership</a></li>
-                    <li><a href="#">Personal Finance</a></li>
-                    <li><a href="#">Career Development</a></li>
-                    <li><a href="#">Parenting & Relationships</a></li>
-                    <li><a href="#">Happiness</a></li>
-                </ul>
-            </li>
-            <li>
-                <a href="course-grid.html">Marketing</a>
-                <ul class="sub-menu">
-                    <li><a href="#">All Marketing</a></li>
-                    <li><a href="#">Digital Marketing</a></li>
-                    <li><a href="#">Search Engine Optimization</a></li>
-                    <li><a href="#">Social Media Marketing</a></li>
-                    <li><a href="#">Branding</a></li>
-                    <li><a href="#">Video & Mobile Marketing</a></li>
-                    <li><a href="#">Affiliate Marketing</a></li>
-                    <li><a href="#">Growth Hacking</a></li>
-                    <li><a href="#">Other</a></li>
-                </ul>
-            </li>
-            <li>
-                <a href="course-grid.html">Health & Fitness</a>
-                <ul class="sub-menu">
-                    <li><a href="#">All Health & Fitness</a></li>
-                    <li><a href="#">Fitness</a></li>
-                    <li><a href="#">Sports</a></li>
-                    <li><a href="#">Dieting</a></li>
-                    <li><a href="#">Self Defense</a></li>
-                    <li><a href="#">Meditation</a></li>
-                    <li><a href="#">Mental Health</a></li>
-                    <li><a href="#">Yoga</a></li>
-                    <li><a href="#">Dance</a></li>
-                    <li><a href="#">Other</a></li>
-                </ul>
-            </li>
-            <li>
-                <a href="course-grid.html">Photography</a>
-                <ul class="sub-menu">
-                    <li><a href="#">All Photography</a></li>
-                    <li><a href="#">Digital Photography</a></li>
-                    <li><a href="#">Photography Fundamentals</a></li>
-                    <li><a href="#">Commercial Photography</a></li>
-                    <li><a href="#">Video Design</a></li>
-                    <li><a href="#">Photography Tools</a></li>
-                    <li><a href="#">Other</a></li>
-                </ul>
-            </li>
+    </li>
+    <li>
+        <a href="course-grid.html">Affaires</a>
+        <ul class="sub-menu">
+            <li><a href="#">Toutes les Affaires</a></li>
+            <li><a href="#">Finance</a></li>
+            <li><a href="#">Entrepreneuriat</a></li>
+            <li><a href="#">Stratégie</a></li>
+            <li><a href="#">Immobilier</a></li>
+            <li><a href="#">Entreprise à Domicile</a></li>
+            <li><a href="#">Communications</a></li>
+            <li><a href="#">Industrie</a></li>
+            <li><a href="#">Autre</a></li>
         </ul>
+    </li>
+    <li>
+        <a href="course-grid.html">IT & Logiciels</a>
+        <ul class="sub-menu">
+            <li><a href="#">Tout IT & Logiciels</a></li>
+            <li><a href="#">Certification IT</a></li>
+            <li><a href="#">Matériel</a></li>
+            <li><a href="#">Réseau & Sécurité</a></li>
+            <li><a href="#">Systèmes d'Exploitation</a></li>
+            <li><a href="#">Autre</a></li>
+        </ul>
+    </li>
+    <li>
+        <a href="course-grid.html">Finance & Comptabilité</a>
+        <ul class="sub-menu">
+            <li><a href="#">Toute la Finance & Comptabilité</a></li>
+            <li><a href="#">Comptabilité & Tenue de Livres</a></li>
+            <li><a href="#">Cryptomonnaie & Blockchain</a></li>
+            <li><a href="#">Économie</a></li>
+            <li><a href="#">Investissement & Trading</a></li>
+            <li><a href="#">Autres Finance & Économie</a></li>
+        </ul>
+    </li>
+    <li>
+        <a href="course-grid.html">Design</a>
+        <ul class="sub-menu">
+            <li><a href="#">Tout le Design</a></li>
+            <li><a href="#">Design Graphique</a></li>
+            <li><a href="#">Design Web</a></li>
+            <li><a href="#">Outils de Design</a></li>
+            <li><a href="#">3D & Animation</a></li>
+            <li><a href="#">Expérience Utilisateur</a></li>
+            <li><a href="#">Autre</a></li>
+        </ul>
+    </li>
+    <li>
+        <a href="course-grid.html">Développement Personnel</a>
+        <ul class="sub-menu">
+            <li><a href="#">Tout le Développement Personnel</a></li>
+            <li><a href="#">Transformation Personnelle</a></li>
+            <li><a href="#">Productivité</a></li>
+            <li><a href="#">Leadership</a></li>
+            <li><a href="#">Finances Personnelles</a></li>
+            <li><a href="#">Développement de Carrière</a></li>
+            <li><a href="#">Parentalité & Relations</a></li>
+            <li><a href="#">Bonheur</a></li>
+        </ul>
+    </li>
+    <li>
+        <a href="course-grid.html">Marketing</a>
+        <ul class="sub-menu">
+            <li><a href="#">Tout le Marketing</a></li>
+            <li><a href="#">Marketing Digital</a></li>
+            <li><a href="#">Référencement (SEO)</a></li>
+            <li><a href="#">Marketing des Réseaux Sociaux</a></li>
+            <li><a href="#">Image de Marque</a></li>
+            <li><a href="#">Marketing Vidéo & Mobile</a></li>
+            <li><a href="#">Marketing d'Affiliation</a></li>
+            <li><a href="#">Growth Hacking</a></li>
+            <li><a href="#">Autre</a></li>
+        </ul>
+    </li>
+    <li>
+        <a href="course-grid.html">Santé & Bien-être</a>
+        <ul class="sub-menu">
+            <li><a href="#">Toute la Santé & Bien-être</a></li>
+            <li><a href="#">Fitness</a></li>
+            <li><a href="#">Sports</a></li>
+            <li><a href="#">Régime Alimentaire</a></li>
+            <li><a href="#">Auto-défense</a></li>
+            <li><a href="#">Méditation</a></li>
+            <li><a href="#">Santé Mentale</a></li>
+            <li><a href="#">Yoga</a></li>
+            <li><a href="#">Danse</a></li>
+            <li><a href="#">Autre</a></li>
+        </ul>
+    </li>
+    <li>
+        <a href="course-grid.html">Photographie</a>
+        <ul class="sub-menu">
+            <li><a href="#">Toute la Photographie</a></li>
+            <li><a href="#">Photographie Numérique</a></li>
+            <li><a href="#">Fondamentaux de la Photographie</a></li>
+            <li><a href="#">Photographie Commerciale</a></li>
+            <li><a href="#">Conception Vidéo</a></li>
+            <li><a href="#">Outils de Photographie</a></li>
+            <li><a href="#">Autre</a></li>
+        </ul>
+    </li>
+</ul>
     </div><!-- end off-canvas-menu -->
     <div class="mobile-search-form">
         <div class="d-flex align-items-center">

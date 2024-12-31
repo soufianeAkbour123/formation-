@@ -1,103 +1,168 @@
+<style>
+.footer-area {
+    font-size: 14px;
+    line-height: 1.6;
+    word-wrap: break-word; /* Ajout pour éviter les débordements */
+    word-break: keep-all; /* Garde les mots entiers */
+}
+
+.footer-area h3 {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    white-space: nowrap; /* Empêche les titres d'être coupés */
+}
+
+.footer-area .generic-list-item li {
+    margin-bottom: 8px;
+    word-break: keep-all; /* Garde les mots entiers */
+    white-space: nowrap; /* Empêche les éléments de liste d'être coupés */
+}
+
+.footer-area .social-icons li {
+    display: inline-block;
+    margin-right: 10px; /* Espacement entre les icônes sociales */
+}
+
+.footer-area .social-icons li a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    color: #fff; /* Couleur des icônes */
+    font-size: 16px;
+}
+
+.footer-area .social-icons li a.facebook-bg {
+    background-color: #3b5998;
+}
+
+.footer-area .social-icons li a.whatsapp-bg {
+    background-color: #25d366;
+}
+
+.footer-area .social-icons li a.instagram-bg {
+    background-color: #e4405f;
+}
+
+.footer-area .social-icons li a.linkedin-bg {
+    background-color: #0077b5;
+}
+
+.copyright-content p {
+    font-size: 12px;
+    text-align: center;
+    color: #777;
+}
+</style>
+
 <section class="footer-area pt-100px">
     <div class="container">
         <div class="row">
             <div class="col-lg-3 responsive-column-half">
                 <div class="footer-item">
                     <a href="index.html">
-                        <img src="{{ asset('frontend/images/OSRlogo.png') }}" alt="footer logo" class="footer__logo" width="180" height="180" >
+                        <img src="{{ asset('frontend/images/OSRlogo.png') }}" alt="footer logo" class="footer__logo" width="160" height="160">
                     </a>
                     <ul class="generic-list-item pt-4">
-                        <li><a href="tel:+1631237884">+212 52299-6566</a></li>
-                        <li><a href="mailto:support@wbsite.com">contact@suptechnology.ma</a></li>
-                        <li>Immeuble 4 - avenue cadi aiss (en face mac donald) maarif 20333 Casablanca</li>
+                        <br>
+                        <br>
+                        <br>
+
+                        <li><a href="tel:+212522996566">+212 52299-6566</a></li>
+                        <li><a href="mailto:contact@suptechnology.ma">contact@suptechnology.ma</a></li>
+                        <li>Immeuble 4 - avenue cadi aiss (en face mac donald) 
+                            <br>Maarif 20333 Casablanca</li>
                     </ul>
-                    <h3 class="fs-20 font-weight-semi-bold pt-4 pb-2">Nous en sommes à</h3>
-                    <ul class="social-icons social-icons-styled">
-                        <li class="mr-1"><a href="#" class="facebook-bg"><i class="la la-facebook"></i></a></li>
-                        <li class="mr-1"><a href="#" class="whatsapp-bg"><i class="la la-whatsapp"></i></a></li>
-                        <li class="mr-1"><a href="#" class="instagram-bg"><i class="la la-instagram"></i></a></li>
-                        <li class="mr-1"><a href="#" class="linkedin-bg"><i class="la la-linkedin"></i></a></li>
+                    <style>
+                        .social-icons {
+    display: flex; /* Place les icônes sur une seule ligne */
+    justify-content: start; /* Aligne les icônes au début (vous pouvez changer en "center" ou "space-around" si nécessaire) */
+    gap: 10px; /* Ajoute de l'espace entre les icônes */
+    padding: 0; /* Retire les espaces internes */
+    margin: 0; /* Retire les marges externes */
+    list-style: none; /* Retire les puces */
+}
+
+.social-icons li {
+    display: inline-block; /* S'assure que chaque icône se comporte comme un élément en ligne */
+}
+
+.social-icons a {
+    display: inline-flex; /* Maintient les styles flexibles pour les liens */
+    align-items: center; /* Centre verticalement les icônes */
+    justify-content: center; /* Centre horizontalement les icônes */
+    width: 40px; /* Taille de chaque icône */
+    height: 40px; /* Taille de chaque icône */
+    border-radius: 50%; /* Rend les icônes circulaires */
+    text-decoration: none; /* Supprime les soulignements */
+    color: white; /* Définit la couleur du texte ou des icônes */
+}
+
+.social-icons a.facebook-bg {
+    background-color: #3b5998; /* Couleur pour Facebook */
+}
+
+.social-icons a.whatsapp-bg {
+    background-color: #25D366; /* Couleur pour WhatsApp */
+}
+
+.social-icons a.instagram-bg {
+    background-color: #E1306C; /* Couleur pour Instagram */
+}
+
+.social-icons a.linkedin-bg {
+    background-color: #0077B5; /* Couleur pour LinkedIn */
+}
+
+                        </style>
+                    <h3>Nous en sommes à</h3>
+                    <ul class="social-icons">
+                        <li><a href="#" class="facebook-bg"><i class="la la-facebook"></i></a></li>
+                        <li><a href="#" class="whatsapp-bg"><i class="la la-whatsapp"></i></a></li>
+                        <li><a href="#" class="instagram-bg"><i class="la la-instagram"></i></a></li>
+                        <li><a href="#" class="linkedin-bg"><i class="la la-linkedin"></i></a></li>
                     </ul>
-                </div><!-- end footer-item -->
-            </div><!-- end col-lg-3 -->
+                </div>
+            </div>
             <div class="col-lg-3 responsive-column-half">
                 <div class="footer-item">
-                    <h3 class="fs-20 font-weight-semi-bold pb-2">Entreprise</h3>
-                    <div class="divider border-bottom-0"><span></span></div>
+                    <h3>Entreprise</h3>
                     <ul class="generic-list-item">
-                        <li><a href="#">A propos</a></li>
-                        <li><a href="#">Qui Somme Nous ?</a></li>
-                        <li><a href="#">Contactez-nous</a></li>
+                        <li><a href="#">À propos</a></li>
+                        <li><a href="#">Qui sommes-nous ? </a></li>
+                        <li><a href="#">Contactez-nous<br></a></li>
                         <li><a href="#">Support</a></li>
-                        
                     </ul>
-                </div><!-- end footer-item -->
-            </div><!-- end col-lg-3 -->
+                </div>
+            </div>
             <div class="col-lg-3 responsive-column-half">
                 <div class="footer-item">
-                    <h3 class="fs-20 font-weight-semi-bold pb-2">Formation</h3>
-                    <div class="divider border-bottom-0"><span></span></div>
+                    <h3>Formation</h3>
                     <ul class="generic-list-item">
                         <li><a href="#">Web Development</a></li>
                         <li><a href="#">Infrastructures</a></li>
                         <li><a href="#">Big Data & Intelligence Artificielle</a></li>
                         <li><a href="#">Admin. Systèmes & Cloud</a></li>
-                        
                     </ul>
-                </div><!-- end footer-item -->
-            </div><!-- end col-lg-3 -->
+                </div>
+            </div>
             <div class="col-lg-3 responsive-column-half">
                 <div class="footer-item">
-                    <h3 class="fs-20 font-weight-semi-bold pb-2">Autre</h3>
-                    <div class="divider border-bottom-0">
-                        <ul class="generic-list-item">
-                            <li><a href="{{ route('become.instructor') }}">Devenir Professeur</a></li>
-                                     
-                        </ul>
-                    </div>
-                    
-                </div><!-- end footer-item -->
-            </div><!-- end col-lg-3 -->
-        </div><!-- end row -->
-    </div><!-- end container -->
+                    <h3>Autre</h3>
+                    <ul class="generic-list-item">
+                        <li><a href="{{ route('become.instructor') }}">Devenir Professeur</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="section-block"></div>
     <div class="copyright-content py-4">
         <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-6">
-                    <center><p class="copy-desc">&copy;  2024 Suptechnology. All Rights Reserved. by Suptechnology  </p></center>
-                </div><!-- end col-lg-6 -->
-                <div class="col-lg-6">
-                    <div class="d-flex flex-wrap align-items-center justify-content-end">
-                        <ul class="generic-list-item d-flex flex-wrap align-items-center fs-14">
-                            <!-- <li class="mr-3"><a href="terms-and-conditions.html">Terms & Conditions</a></li> -->
-                            <!-- <li class="mr-3"><a href="privacy-policy.html">Privacy Policy</a></li> -->
-                        </ul>
-                        <!-- <div class="select-container select-container-sm">
-                            <select class="select-container-select">
-                                <option value="1">English</option>
-                                <option value="2">Deutsch</option>
-                                <option value="3">Español</option>
-                                <option value="4">Français</option>
-                                <option value="5">Bahasa Indonesia</option>
-                                <option value="6">Bangla</option>
-                                <option value="7">日本語</option>
-                                <option value="8">한국어</option>
-                                <option value="9">Nederlands</option>
-                                <option value="10">Polski</option>
-                                <option value="11">Português</option>
-                                <option value="12">Română</option>
-                                <option value="13">Русский</option>
-                                <option value="14">ภาษาไทย</option>
-                                <option value="15">Türkçe</option>
-                                <option value="16">中文(简体)</option>
-                                <option value="17">中文(繁體)</option>
-                                <option value="17">Hindi</option>
-                            </select>
-                        </div> -->
-                    </div>
-                </div><!-- end col-lg-6 -->
-            </div><!-- end row -->
-        </div><!-- end container -->
-    </div><!-- end copyright-content -->
-</section><!-- end footer-area -->
+            <p>&copy; 2024 Suptechnology. All Rights Reserved.</p>
+        </div>
+    </div>
+</section>

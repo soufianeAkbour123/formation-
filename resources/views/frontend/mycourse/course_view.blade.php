@@ -485,7 +485,7 @@ START COURSE-DASHBOARD
             <div class="col-lg-3 responsive-column-half">
                 <div class="footer-item">
                     <a href="index.html">
-                        <img src="{{ asset('frontend/images/formation.jfif') }}" alt="footer logo" class="footer__logo" width="130" height="95" >
+                        <img src="{{ asset('frontend/images/OSRlogo.png') }}" alt="footer logo" class="footer__logo" width="150" height="150" >
                     </a>
                     <ul class="generic-list-item pt-4">
                         <li><a href="tel:+1631237884">+212 52299-6566</a></li>

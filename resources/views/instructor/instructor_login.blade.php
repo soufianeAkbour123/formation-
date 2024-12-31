@@ -50,7 +50,7 @@
 							<div class="card-body p-sm-5">
 								<div class="">
 									<div class="mb-3 text-center">
-										<img src="{{ asset('backend/assets/images/formation.jfif') }}" width="140" alt="">
+										<img src="{{ asset('backend/assets/images/OSRlogo.png') }}" width="168" alt="">
 									</div>
 									<div class="text-center mb-4">
 										<h5 class="">Instructeur Login</h5>

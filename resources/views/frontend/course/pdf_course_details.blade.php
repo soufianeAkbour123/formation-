@@ -226,7 +226,7 @@
 
 <body>
     <div class="header">
-        <img src="data:image/png;base64,{{ base64_encode(file_get_contents(public_path('frontend/images/formation.jfif'))) }}" alt="logo de l'entreprise">
+        <img src="data:image/png;base64,{{ base64_encode(file_get_contents(public_path('frontend/images/OSRlogo.png'))) }}" alt="logo de l'entreprise">
         <h1>{{ $course->course_title }}</h1>
         <p class="subheader">Programme de formation 2024-2025</p>
         <img src="data:image/png;base64,{{ base64_encode(file_get_contents(public_path($course->course_image))) }}" class="course-image img-thumbnail" alt="Image du cours"/>
