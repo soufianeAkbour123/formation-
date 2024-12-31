@@ -9,7 +9,7 @@
 
         <div>
 
-            <img src="{{ asset('backend/assets/images/formation.jfif') }}" class="logo-icon" alt="logo icon">
+            <img src="{{ asset('backend/assets/images/OSRlogo.png') }}" class="logo-icon" alt="logo icon">
 
         </div>
 
