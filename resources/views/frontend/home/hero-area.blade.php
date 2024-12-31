@@ -31,16 +31,38 @@
 
     </style> -->
     <div class="hero-slider owl-action-styled">
+    <div class="hero-slider-item hero-bg-2" style="padding: 80px 0;">
+            <div class="container">
+                <div class="hero-content text-center">
+                    <div class="section-heading">
+                        <h2 class="section__title text-white fs-65 lh-80 pb-3">The Ultimate  <br> learning experience</h2>
+                        <p class="section__desc text-white pb-4">
+                            OpenSkillRoom révolutionne l'industrie de l'apprentissage 
+                            au Maroc avec des cours synchrones de haute qualité, 
+                            adaptés aux besoins actuels du marché. Découvrez une nouvelle façon 
+                            d'apprendre avec notre plateforme innovante.
+                        </p>
+                    </div><!-- end section-heading -->
+                    <div class="hero-btn-box d-flex flex-wrap align-items-center pt-1 justify-content-center">
+                        <a href="#" class="btn theme-btn mr-4 mb-4">Commencer <i class="la la-arrow-right icon ml-1"></i></a>
+                        <a href="#" class="btn-text video-play-btn mb-4" data-fancybox data-src="https://www.youtube.com/watch?v=cRXm1p-CNyk">
+                            Regarder l'aperçu<i class="la la-play icon-btn ml-2"></i>
+                        </a>
+                    </div><!-- end hero-btn-box -->
+                </div><!-- end hero-content -->
+            </div><!-- container -->
+        </div><!-- end hero-slider-item -->
         <div class="hero-slider-item hero-bg-1" style="padding: 80px 0;">
             
             <div class="container">
                 <div class="hero-content text-center">
                     <div class="section-heading">
-                        <h2 class="section__title text-white fs-65 lh-80 pb-3">Devenez membre OpenMeetRoom <br> Et profiter des derniers experience learning</h2>
-                        <p class="section__desc text-white pb-4">
-                            Formations++ est une plateforme d'apprentissage au Maroc spécialisée dans les cours synchrones. Elle permet aux étudiants de participer en temps réel à des sessions interactives avec des instructeurs qualifiés. 
-                            La plateforme favorise un environnement d'apprentissage collaboratif et flexible, adapté aux besoins du marché marocain.
-                        </p>
+                    <h2 class="section__title text-white fs-65 lh-80 pb-3">Devenez membre OpenSkillRoom <br> et profitez des dernières expériences d'apprentissage</h2>
+            <p class="section__desc text-white pb-4">
+                OpenSkillRoom est une plateforme d'apprentissage au Maroc spécialisée dans les cours synchrones. Elle permet aux étudiants de participer en temps réel à des sessions interactives avec des instructeurs qualifiés. 
+                La plateforme favorise un environnement d'apprentissage collaboratif et flexible, adapté aux besoins du marché marocain.
+            </p>
+
                     </div><!-- end section-heading -->
                     <div class="hero-btn-box d-flex flex-wrap justify-content-center pt-1">
                         <a href="#s" class="btn theme-btn mr-4 mb-4">Rejoignez-nous<i class="la la-arrow-right icon ml-1"></i></a>
@@ -64,27 +86,7 @@
                 </div><!-- end hero-content -->
             </div><!-- end container -->
         </div><!-- end hero-slider-item -->
-        <div class="hero-slider-item hero-bg-2" style="padding: 80px 0;">
-            <div class="container">
-                <div class="hero-content text-center">
-                    <div class="section-heading">
-                        <h2 class="section__title text-white fs-65 lh-80 pb-3">The Ultimate  <br> learning experience</h2>
-                        <p class="section__desc text-white pb-4">
-                            Formation++ révolutionne l'industrie de l'apprentissage 
-                            au Maroc avec des cours synchrones de haute qualité, 
-                            adaptés aux besoins actuels du marché. Découvrez une nouvelle façon 
-                            d'apprendre avec notre plateforme innovante.
-                        </p>
-                    </div><!-- end section-heading -->
-                    <div class="hero-btn-box d-flex flex-wrap align-items-center pt-1 justify-content-center">
-                        <a href="#" class="btn theme-btn mr-4 mb-4">Commencer <i class="la la-arrow-right icon ml-1"></i></a>
-                        <a href="#" class="btn-text video-play-btn mb-4" data-fancybox data-src="https://www.youtube.com/watch?v=cRXm1p-CNyk">
-                            Regarder l'aperçu<i class="la la-play icon-btn ml-2"></i>
-                        </a>
-                    </div><!-- end hero-btn-box -->
-                </div><!-- end hero-content -->
-            </div><!-- container -->
-        </div><!-- end hero-slider-item -->
+        
         <!-- <div class="hero-slider-item hero-bg-3">
             <div class="container">
                 <div class="hero-content text-right">
