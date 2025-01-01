@@ -72,7 +72,7 @@
                         <div class="card card-item card-preview" data-tooltip-content="#tooltip_content_1{{ $course->id }}">
                             <div class="card-image">
                                 <a href="{{ url('course/details/'.$course->id.'/'.$course->course_name_slug) }}" class="d-block">
-                                    <img class="card-img-top lazy" src="{{ asset($course->course_image) }}" data-src="images/img8.jpg" alt="Card image cap">
+                                    <img class="card-img-top lazy" src="{{ asset('public/upload/course/thambnail/' . basename($course->course_image)) }}" data-src="images/img8.jpg" alt="Card image cap">
                                 </a>
 
                                 @php
