@@ -178,7 +178,6 @@ public function StoreCourse(Request $request)
     }
 }
 
-// Méthodes de traitement des fichiers
 private function handleCourseImage(Request $request)
 {
     if (!$request->hasFile('course_image')) {
@@ -187,16 +186,21 @@ private function handleCourseImage(Request $request)
 
     $image = $request->file('course_image');
     $name_gen = hexdec(uniqid()) . '.' . $image->getClientOriginalExtension();
-
-    // Créez le dossier s'il n'existe pas
     $directoryPath = public_path('upload/course/thumbnail');
+
     if (!file_exists($directoryPath)) {
         mkdir($directoryPath, 0775, true);
     }
 
     try {
         $imagePath = $directoryPath . '/' . $name_gen;
-        Image::make($image)->resize(370, 246)->save($imagePath);
+        // Fit the image within dimensions while maintaining aspect ratio
+        Image::make($image)
+            ->fit(370, 246, function ($constraint) {
+                $constraint->aspectRatio();
+                $constraint->upsize();
+            })
+            ->save($imagePath);
         return 'upload/course/thumbnail/' . $name_gen;
     } catch (\Exception $e) {
         throw new \Exception('Erreur lors du traitement de l\'image : ' . $e->getMessage());
