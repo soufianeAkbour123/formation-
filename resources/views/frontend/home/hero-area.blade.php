@@ -12,50 +12,6 @@
         </div>
     </div>
 </div>
-<style>
-    .hero-slider-item {
-  position: relative;
-  z-index: 2;
-  padding-top: 200px;
-  padding-bottom: 270px; }
-  @media (max-width: 480px) {
-    .hero-slider-item {
-      padding-top: 120px;
-      padding-bottom: 200px; } }
-
-/* Nouveau style pour le premier slide */
-.hero-slider-item:first-child {
-  background: #ffffff;  /* Fond blanc */
-}
-.hero-slider-item:first-child:after,
-.hero-slider-item:first-child:before {
-  display: none;  /* Supprime l'overlay et l'image d'arrière-plan pour le premier slide uniquement */
-}
-
-/* Les styles existants pour les autres slides */
-.hero-slider-item:not(:first-child):after {
-    position: absolute;
-    left: 0;
-    top: 0;
-    height: 100%;
-    width: 100%;
-    background-color: #233d63;
-    opacity: .90;
-    content: "";
-    z-index: -1; }
-  .hero-slider-item:not(:first-child):before {
-    position: absolute;
-    content: '';
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    background-position: center;
-    z-index: 1;
-    opacity: 0.1;
-    pointer-events: none; }
-    </style>
 
        <!-- Deuxième slide - inchangé -->
        <div class="hero-slider-item hero-bg-1" style="padding: 80px 0;">

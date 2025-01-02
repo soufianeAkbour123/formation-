@@ -6388,6 +6388,13 @@ div.datedropper .picker .pick-lg-b li {
   transition-delay: 1100ms; }
 
 /*-=========== hero-slider-item ==========-*/
+.hero-slider-item:first-child {
+  background: #ffffff;  /* Fond blanc */
+}
+.hero-slider-item:first-child:after,
+.hero-slider-item:first-child:before {
+  display: none;  /* Supprime l'overlay et l'image d'arrière-plan pour le premier slide uniquement */
+}
 .hero-slider-item {
   position: relative;
   z-index: 2;
