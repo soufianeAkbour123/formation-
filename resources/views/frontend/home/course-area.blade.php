@@ -97,6 +97,8 @@
     background: white;
     padding: 8px;
     border-radius: 6px;
+    background: transparent;
+
 }
 
 .course-badge i {
@@ -134,9 +136,7 @@
     opacity: 1;
     visibility: visible;
 }
-.course-badge {
-    background: transparent;
-}
+
 </style>
 
 <div class="course-badge-labels">
