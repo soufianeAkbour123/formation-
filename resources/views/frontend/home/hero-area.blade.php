@@ -1,16 +1,16 @@
 <section class="hero-area">
    <div class="hero-slider owl-action-styled">
        <!-- Premier slide - Logo -->
-       <div class="hero-slider-item" style="padding: 80px 0; background: #f8f9fa; height: auto;">
-   <div class="container">
-       <div style="display: flex; align-items: center; justify-content: center; min-height: 500px;">
-           <img 
-               src="{{ asset('frontend/images/OSRlogo.png') }}" 
-               alt="OpenSkillRoom Logo"
-               style="width: auto; max-width: 120%; max-height: 80vh; object-fit: contain; transform: scale(1.5);"
-           >
-       </div>
-   </div>
+       <div class="hero-slider-item" style="padding: 80px 0; background: #ffffff; height: auto;">
+    <div class="container">
+        <div style="display: flex; align-items: center; justify-content: center; min-height: 500px;">
+            <img 
+                src="{{ asset('frontend/images/OSRlogo.png') }}" 
+                alt="OpenSkillRoom Logo"
+                style="width: auto; max-width: 120%; max-height: 80vh; object-fit: contain; transform: scale(1.5);"
+            >
+        </div>
+    </div>
 </div>
 
        <!-- Deuxième slide - inchangé -->
