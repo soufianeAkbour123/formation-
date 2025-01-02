@@ -223,7 +223,7 @@
 .course-badge {
     position: relative;
     display: inline-flex;
-    align-items: center;
+    
     background: transparent;
     padding: 8px;
     border-radius: 6px;
