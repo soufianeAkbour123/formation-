@@ -901,20 +901,20 @@ document.addEventListener('DOMContentLoaded', function() {
                             
                         </a>
                         <div class="course-badge-labels">
-                            @if ($course->bestseller == 1)
-                                <span class="course-badge bestseller-badge">
-                                    <i class="la la-gem"></i>
-                                    <span class="badge-tooltip">Meilleure vente</span>
-                                </span>
-                            @endif
+            @if ($course->bestseller == 1)
+                <span class="course-badge bestseller-badge">
+                    <i class="la la-gem"></i>
+                    <span class="badge-tooltip">Meilleure vente</span>
+                </span>
+            @endif
 
-                            @if ($course->discount_price == NULL)
-                                <span class="course-badge new-badge">
-                                    <i class="la la-star"></i>
-                                    <span class="badge-tooltip">Nouveau</span>
-                                </span>
-                            @endif
-                        </div>
+            @if ($course->discount_price == NULL)
+                <span class="course-badge new-badge">
+                    <i class="la la-star"></i>
+                    <span class="badge-tooltip">Nouveau</span>
+                </span>
+            @endif
+        </div>
                     </div><!-- end card-image -->
                     <div class="card-body">
                         <h6 class="ribbon ribbon-blue-bg fs-14 mb-3">
@@ -1038,24 +1038,29 @@ document.addEventListener('DOMContentLoaded', function() {
     position: relative;
     display: inline-flex;
     align-items: center;
-    background: white;
+    background: transparent;
     padding: 8px;
     border-radius: 6px;
-    background: transparent;
-
 }
 
 .course-badge i {
-    font-size: 22px;
+    font-size: 24px;
     transition: all 0.3s ease;
 }
 
 .course-badge.new-badge i {
     color: #ff3d57;
+    filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.2));
 }
 
 .course-badge.bestseller-badge i {
     color: #ff8f00;
+    filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.2));
+}
+
+.course-badge.discount-badge i {
+    color: #28a745;
+    filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.2));
 }
 
 .badge-tooltip {
