@@ -901,20 +901,25 @@ document.addEventListener('DOMContentLoaded', function() {
                             
                         </a>
                         <div class="course-badge-labels">
-            @if ($course->bestseller == 1)
-                <span class="course-badge bestseller-badge">
-                    <i class="la la-gem"></i>
-                    <span class="badge-tooltip">Meilleure vente</span>
-                </span>
-            @endif
+                        @if ($inscourse->bestseller == 1)
+                            <span class="course-badge bestseller-badge">
+                                <i class="la la-gem"></i>
+                                <span class="badge-tooltip">Meilleure vente</span>
+                            </span>
+                        @endif
 
-            @if ($course->discount_price == NULL)
-                <span class="course-badge new-badge">
-                    <i class="la la-star"></i>
-                    <span class="badge-tooltip">Nouveau</span>
-                </span>
-            @endif
-        </div>
+                        @if ($inscourse->discount_price == NULL)
+                            <span class="course-badge new-badge">
+                                <i class="la la-star"></i>
+                                <span class="badge-tooltip">Nouveau</span>
+                            </span>
+                        @else
+                            <span class="course-badge discount-badge">
+                                <i class="la la-tags"></i>
+                                <span class="badge-tooltip">{{ round($discount) }}% de réduction</span>
+                            </span>
+                        @endif
+                    </div>
                     </div><!-- end card-image -->
                     <div class="card-body">
                         <h6 class="ribbon ribbon-blue-bg fs-14 mb-3">
