@@ -897,7 +897,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 <div class="card card-item">
                     <div class="card-image">
                         <a href="{{ url('course/details/'.$inscourse->id.'/'.$inscourse->course_name_slug) }}" class="d-block">
-                            <img class="card-img-top" src="{{ asset($inscourse->course_image) }}" alt="Card image cap">
+                            <img class="card-img-top" src="{{ asset('public/upload/course/thambnail/' . basename($inscourse->course_image)) }}" alt="Card image cap">
+                            
                         </a>
                         <div class="course-badge-labels">
                             @if ($inscourse->bestseller == 1)
