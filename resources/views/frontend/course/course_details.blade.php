@@ -884,7 +884,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <section class="related-course-area bg-gray pt-60px pb-60px">
     <div class="container">
         <div class="related-course-wrap">
-            <h3 class="fs-28 font-weight-semi-bold pb-35px">Plus de cours par <a href="teacher-detail.html" class="text-color hover-underline">{{ $course['user']['name'] }}</a></h3>
+            <h3 class="fs-28 font-weight-semi-bold pb-35px">Plus de cours par.<a href="teacher-detail.html" class="text-color hover-underline">{{ $course['user']['name'] }}</a></h3>
             <div class="view-more-carousel-2 owl-action-styled">
                 
                 @foreach ($instructorCourses as $inscourse)
@@ -901,20 +901,18 @@ document.addEventListener('DOMContentLoaded', function() {
                         </a>
                         <div class="course-badge-labels">
                             @if ($inscourse->bestseller == 1)
-                                <span class="course-badge bestseller-badge">
-                                    <i class="la la-gem"></i>
-                                    <span class="badge-tooltip">Meilleure vente</span>
-                                </span>
+                                <div class="course-badge">Meilleure Vente</div>
                             @endif
-
+                            @if ($inscourse->highestrated == 1)
+                                <div class="course-badge sky-blue">Le Mieux Noté</div>
+                            @endif
                             @if ($inscourse->discount_price == NULL)
-                                <span class="course-badge new-badge">
-                                    <i class="la la-star"></i>
-                                    <span class="badge-tooltip">Nouveau</span>
-                                </span>
+                                <div class="course-badge blue">Nouveau</div>
+                            @else
+                                <div class="course-badge blue">{{ round($discount) }}%</div>
                             @endif
                         </div>
-                    </div>
+                    </div><!-- end card-image -->
                     <div class="card-body">
                         <h6 class="ribbon ribbon-blue-bg fs-14 mb-3">
                             @if ($inscourse->label == 'Begginer')
@@ -975,7 +973,7 @@ document.addEventListener('DOMContentLoaded', function() {
                                 @endif 
                             </div>
                             <span class="rating-total pl-1">({{ count($reviewcount) }})</span>
-                        </div>
+                        </div><!-- end rating-wrap -->
                         <div class="d-flex justify-content-between align-items-center">
                             @if ($inscourse->discount_price == NULL)
                                 <p class="card-price text-black font-weight-bold">{{ $inscourse->selling_price }} DH</p>
@@ -986,18 +984,21 @@ document.addEventListener('DOMContentLoaded', function() {
                             @endif
 
                             <div class="d-flex align-items-center">
+                                <!-- Icon to view course details -->
                                 <a href="{{ url('course/details/'.$inscourse->id.'/'.$inscourse->course_name_slug) }}" 
                                    class="icon-element icon-element-sm shadow-sm mr-2 cursor-pointer" 
                                    title="Voir les détails du cours">
                                     <i class="la la-eye"></i>
                                 </a>
 
+                                <!-- Icon to add to cart -->
                                 <div class="icon-element icon-element-sm shadow-sm cursor-pointer" 
                                      title="Ajouter au panier"
                                      onclick="addToCart({{$inscourse->id}}, '{{$inscourse->course_name}}', '{{$inscourse->instructor_id}}', '{{$inscourse->course_name_slug}}')">
                                     <i class="la la-shopping-cart"></i>
                                 </div>
 
+                                <!-- Wishlist icon -->
                                 <div class="icon-element icon-element-sm shadow-sm ml-2 cursor-pointer" 
                                      title="Ajouter aux favoris" 
                                      id="{{ $inscourse->id }}" 
@@ -1006,79 +1007,23 @@ document.addEventListener('DOMContentLoaded', function() {
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div>
+                    </div><!-- end card-body -->
+                </div><!-- end card --> 
                 @endforeach
             
-            </div>
-        </div>
-    </div>
-</section>
-
+            </div><!-- end view-more-carousel -->
+        </div><!-- end related-course-wrap -->
+    </div><!-- end container -->
+</section><!-- end related-course-area -->
 <style>
-.related-course-area .card-title {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: block;
+    .related-course-area .card-title {
+    white-space: nowrap; /* Prevents wrapping of the title */
+    overflow: hidden; /* Hides any overflowing text */
+    text-overflow: ellipsis; /* Adds "..." at the end if the text overflows */
+    display: block; /* Ensures the element behaves as a block */
 }
 
-.course-badge-labels {
-    position: absolute;
-    top: 15px;
-    left: 15px;
-    z-index: 2;
-    display: flex;
-    gap: 12px;
-}
-
-.course-badge {
-    position: relative;
-    display: inline-flex;
-    align-items: center;
-    background: transparent;
-    padding: 8px;
-    border-radius: 6px;
-}
-
-.course-badge i {
-    font-size: 24px;
-    transition: all 0.3s ease;
-}
-
-.course-badge.new-badge i {
-    color: #ff3d57;
-    filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.2));
-}
-
-.course-badge.bestseller-badge i {
-    color: #ff8f00;
-    filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.2));
-}
-
-.badge-tooltip {
-    position: absolute;
-    background: rgba(0, 0, 0, 0.9);
-    color: white;
-    padding: 6px 12px;
-    border-radius: 4px;
-    font-size: 13px;
-    font-weight: 500;
-    white-space: nowrap;
-    top: 120%;
-    left: 50%;
-    transform: translateX(-50%);
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.3s ease;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-}
-
-.course-badge:hover .badge-tooltip {
-    opacity: 1;
-    visibility: visible;
-}
-</style>
+    </style>
 <!--======================================
         END RELATED COURSE AREA
 ======================================-->
