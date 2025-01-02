@@ -90,14 +90,14 @@
                         <img class="card-img-top lazy" src="{{ asset($course->course_image) }}" data-src="{{ asset($course->course_image) }}" alt="Card image cap">  
                     </a>  
                     <div class="course-badge-labels">
-    @if ($inscourse->bestseller == 1)
+    @if ($course->bestseller == 1)
         <span class="course-badge bestseller-badge">
             <i class="la la-gem"></i>
             <span class="badge-tooltip">Meilleure vente</span>
         </span>
     @endif
 
-    @if ($inscourse->discount_price == NULL)
+    @if ($course->discount_price == NULL)
         <span class="course-badge new-badge">
             <i class="la la-star"></i>
             <span class="badge-tooltip">Nouveau</span>
@@ -118,12 +118,7 @@
                         @endif
                     </h6>  
                     <h5 class="card-title"><a href="{{ url('course/details/'.$course->id.'/'.$course->course_name_slug) }}">{{ $course->course_name }}</a></h5>  
-                    <p class="card-text">
-    <a href="{{ route('instructor.details',$inscourse->instructor_id) }}">{{ $inscourse['user']['name'] }}</a>
-    @if ($inscourse->discount_price != NULL)
-        <span class="text-success ml-2">-{{ round($discount) }}%</span>
-    @endif
-</p> 
+                    <p class="card-text"><a href="{{ route('instructor.details',$course->instructor_id) }}">{{ $course['user']['name'] }}</a></p>  
                     <div class="rating-wrap d-flex justify-content-center align-items-center py-2">  
                         <div class="review-stars">  
                             <span class="rating-number">{{ round($avarage,1) }}</span>  
@@ -277,73 +272,6 @@
 .collapse-btn:hover {
     color: #b22222; /* Changement de couleur au survol */
 }
-.related-course-area .card-title {
-    white-space: nowrap; /* Prevents wrapping of the title */
-    overflow: hidden; /* Hides any overflowing text */
-    text-overflow: ellipsis; /* Adds "..." at the end if the text overflows */
-    display: block; /* Ensures the element behaves as a block */
-}
-.course-badge-labels {
-    position: absolute;
-    top: 15px;
-    left: 15px;
-    z-index: 2;
-    display: flex;
-    gap: 12px;
-}
-
-.course-badge {
-    position: relative;
-    display: inline-flex;
-    align-items: center;
-    background: transparent;
-    padding: 8px;
-    border-radius: 6px;
-}
-
-.course-badge i {
-    font-size: 24px;
-    transition: all 0.3s ease;
-}
-
-.course-badge.new-badge i {
-    color: #ff3d57;
-    filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.2));
-}
-
-.course-badge.bestseller-badge i {
-    color: #ff8f00;
-    filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.2));
-}
-
-.course-badge.discount-badge i {
-    color: #28a745;
-    filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.2));
-}
-
-.badge-tooltip {
-    position: absolute;
-    background: rgba(0, 0, 0, 0.9);
-    color: white;
-    padding: 6px 12px;
-    border-radius: 4px;
-    font-size: 13px;
-    font-weight: 500;
-    white-space: nowrap;
-    top: 120%;
-    left: 50%;
-    transform: translateX(-50%);
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.3s ease;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-}
-
-.course-badge:hover .badge-tooltip {
-    opacity: 1;
-    visibility: visible;
-}
-
 </style>
 
 
