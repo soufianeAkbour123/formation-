@@ -211,6 +211,79 @@
 ================================= -->
 <style>
 /* Styles pour les boutons "Lire plus" et "Lire moins" */
+/* Votre style existant */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    background-color: #EC5252;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #d94c4c;
+}
+
+.media-body {
+    text-align: left;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.card-item {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 510px; /* Ajout de la hauteur fixe */
+    display: flex;
+    flex-direction: column;
+}
+
+.card-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.review-stars span {
+    transition: color 0.3s ease;
+}
+
+.review-stars span:hover {
+    color: #EC5252;
+}
+
+.card {
+    border: none;
+    border-radius: 1rem;
+    height: 510px;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-body {
+    padding: 2rem;
+    text-align: left;
+    flex-grow: 1;
+}
+
+.collapse-btn {
+    display: inline-block;
+    margin-top: 1rem;
+    font-weight: bold;
+    color: #EC5252;
+    transition: color 0.3s ease;
+}
+
+.collapse-btn:hover {
+    color: #b22222;
+}
+
+/* Nouvelles classes ajoutées pour les badges et icônes */
 .course-badge-labels {
     position: absolute;
     top: 15px;
@@ -223,8 +296,8 @@
 .course-badge {
     position: relative;
     display: inline-flex;
-    
-    background: transparent;
+    align-items: center;
+    background: transparent !important;
     padding: 8px;
     border-radius: 6px;
 }
@@ -267,74 +340,30 @@
     visibility: visible;
 }
 
-.text-success {
-    color: #28a745 !important;
-    font-weight: 500;
-}
-.btn {
-    display: inline-block;
-    padding: 10px 20px;
-    margin-top: 10px;
-    font-size: 16px;
-    font-weight: 600;
-    color: #fff;
-    background-color: #EC5252;
-    border: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
+/* Style pour le responsive */
+@media (max-width: 767px) {
+    .card {
+        height: auto;
+    }
+    .card-body {
+        padding: 1rem;
+    }
+    .card-item {
+        height: auto;
+    }
 }
 
-.btn:hover {
-    background-color: #d94c4c;
+/* Assurer une taille d'image uniforme */
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+    width: 100%;
 }
 
-/* Suppression du centrage des infos du formateur */
-.media-body {
-    text-align: left;
-}
-
-/* Centrage général (autre que les infos formateur) */
-.text-center {
-    text-align: center;
-}
-
-/* Amélioration du carousel */
-.card-item {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.card-item:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-
-/* Étoiles d'évaluation */
-.review-stars span {
-    transition: color 0.3s ease;
-}
-
-.review-stars span:hover {
-    color: #EC5252;
-}
-.card {
-    border: none;
-    border-radius: 1rem;
-}
-
-.card-body {
-    padding: 2rem;
-}
-
-.collapse-btn {
-    display: inline-block;
-    margin-top: 1rem;
-    font-weight: bold;
-    color: #EC5252;
-    transition: color 0.3s ease;
-}
-
-.collapse-btn:hover {
-    color: #b22222; /* Changement de couleur au survol */
+/* Style pour les icônes d'action */
+.icon-element {
+    background: transparent !important;
+    box-shadow: none !important;
 }
 </style>
 
