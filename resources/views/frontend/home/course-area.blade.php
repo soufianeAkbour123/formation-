@@ -134,6 +134,9 @@
     opacity: 1;
     visibility: visible;
 }
+.course-badge {
+    background: transparent;
+}
 </style>
 
 <div class="course-badge-labels">
@@ -260,8 +263,7 @@
                     </div>
                 </div>
 
-               <!-- Mise à jour de la section des catégories -->
-@foreach ($categories as $category) 
+                @foreach ($categories as $category) 
 <div class="tab-pane fade" id="business{{ $category->id }}" role="tabpanel" aria-labelledby="business-tab">
     <div class="row">
         @php
