@@ -89,21 +89,19 @@
                     <a href="{{ url('course/details/'.$course->id.'/'.$course->course_name_slug) }}" class="d-block">  
                         <img class="card-img-top lazy" src="{{ asset($course->course_image) }}" data-src="{{ asset($course->course_image) }}" alt="Card image cap">  
                     </a>  
-                    <div class="course-badge-labels">
-    @if ($course->bestseller == 1)
-        <span class="course-badge bestseller-badge">
-            <i class="la la-gem"></i>
-            <span class="badge-tooltip">Meilleure vente</span>
-        </span>
-    @endif
-
-    @if ($course->discount_price == NULL)
-        <span class="course-badge new-badge">
-            <i class="la la-star"></i>
-            <span class="badge-tooltip">Nouveau</span>
-        </span>
-    @endif
-</div>  
+                    <div class="course-badge-labels">  
+                        @if ($course->bestseller == 1)  
+                            <div class="course-badge">Meilleure Vente</div>  
+                        @endif  
+                        @if ($course->highestrated == 1)
+                            <div class="course-badge sky-blue">Le Mieux Noté</div>
+                        @endif
+                        @if ($course->discount_price == NULL)  
+                            <div class="course-badge blue">Nouveau</div>  
+                        @else  
+                            <div class="course-badge blue">{{ round($discount) }}%</div>  
+                        @endif  
+                    </div>  
                 </div>  
                 <div class="card-body text-center">
                     <h6 class="ribbon ribbon-blue-bg fs-14 mb-3">
@@ -118,12 +116,8 @@
                         @endif
                     </h6>  
                     <h5 class="card-title"><a href="{{ url('course/details/'.$course->id.'/'.$course->course_name_slug) }}">{{ $course->course_name }}</a></h5>  
-<p class="card-text">
-    <a href="{{ route('instructor.details',$course->instructor_id) }}">{{ $course['user']['name'] }}</a>
-    @if ($course->discount_price != NULL)
-        <span class="text-success ml-2">-{{ round($discount) }}%</span>
-    @endif
-</p>                    <div class="rating-wrap d-flex justify-content-center align-items-center py-2">  
+                    <p class="card-text"><a href="{{ route('instructor.details',$course->instructor_id) }}">{{ $course['user']['name'] }}</a></p>  
+                    <div class="rating-wrap d-flex justify-content-center align-items-center py-2">  
                         <div class="review-stars">  
                             <span class="rating-number">{{ round($avarage,1) }}</span>  
                             @if ($avarage == 0)
