@@ -18,6 +18,7 @@ use App\Http\Controllers\Backend\QuestionController;
 use App\Http\Controllers\Backend\ReviewController;
 use App\Http\Controllers\Backend\ActiveUserController;
 use App\Http\Middleware\RedirectIfAuthenticated;
+use App\Http\Controllers\MaintenanceController;
 
 /*
 |--------------------------------------------------------------------------
@@ -227,6 +228,10 @@ Route::controller(ReviewController::class)->group(function(){
 
     
       //// Route Accessable for All 
+      Route::get('maintenance/login', [MaintenanceController::class, 'showLoginForm'])
+    ->name('maintenance.login');
+    Route::post('maintenance/auth', [MaintenanceController::class, 'login'])
+        ->name('maintenance.auth');
       Route::get('/instructor/login', [InstructorController::class, 'InstructorLogin'])->name('instructor.login')->middleware(RedirectIfAuthenticated::class);
 
 Route::get('/course/details/{id}/{slug}', [IndexController::class, 'CourseDetails']);
@@ -323,3 +328,11 @@ Route::controller(CouponController::class)->group(function(){
 
 });
 ///// End Route Accessable for All 
+
+Route::middleware(['maintenance.auth'])->group(function () {
+    // Toutes vos routes existantes ici
+    Route::get('/', function () {
+        return view('frontend.index');
+    });
+    
+});
