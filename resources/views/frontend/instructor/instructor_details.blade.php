@@ -118,7 +118,7 @@
                         @endif
                     </h6>  
                     <h5 class="card-title"><a href="{{ url('course/details/'.$course->id.'/'.$course->course_name_slug) }}">{{ $course->course_name }}</a></h5>  
-                    <p class="card-text">
+<p class="card-text">
     <a href="{{ route('instructor.details',$course->instructor_id) }}">{{ $course['user']['name'] }}</a>
     @if ($course->discount_price != NULL)
         <span class="text-success ml-2">-{{ round($discount) }}%</span>
@@ -211,7 +211,6 @@
 ================================= -->
 <style>
 /* Styles pour les boutons "Lire plus" et "Lire moins" */
-/* Votre style existant */
 .btn {
     display: inline-block;
     padding: 10px 20px;
@@ -229,19 +228,19 @@
     background-color: #d94c4c;
 }
 
+/* Suppression du centrage des infos du formateur */
 .media-body {
     text-align: left;
 }
 
+/* Centrage général (autre que les infos formateur) */
 .text-center {
     text-align: center;
 }
 
+/* Amélioration du carousel */
 .card-item {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    height: 510px; /* Ajout de la hauteur fixe */
-    display: flex;
-    flex-direction: column;
 }
 
 .card-item:hover {
@@ -249,6 +248,7 @@
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
+/* Étoiles d'évaluation */
 .review-stars span {
     transition: color 0.3s ease;
 }
@@ -256,19 +256,13 @@
 .review-stars span:hover {
     color: #EC5252;
 }
-
 .card {
     border: none;
     border-radius: 1rem;
-    height: 510px;
-    display: flex;
-    flex-direction: column;
 }
 
 .card-body {
     padding: 2rem;
-    text-align: left;
-    flex-grow: 1;
 }
 
 .collapse-btn {
@@ -280,90 +274,7 @@
 }
 
 .collapse-btn:hover {
-    color: #b22222;
-}
-
-/* Nouvelles classes ajoutées pour les badges et icônes */
-.course-badge-labels {
-    position: absolute;
-    top: 15px;
-    left: 15px;
-    z-index: 2;
-    display: flex;
-    gap: 12px;
-}
-
-.course-badge {
-    position: relative;
-    display: inline-flex;
-    align-items: center;
-    background: transparent !important;
-    padding: 8px;
-    border-radius: 6px;
-}
-
-.course-badge i {
-    font-size: 24px;
-    transition: all 0.3s ease;
-}
-
-.course-badge.new-badge i {
-    color: #ff3d57;
-    filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.2));
-}
-
-.course-badge.bestseller-badge i {
-    color: #ff8f00;
-    filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.2));
-}
-
-.badge-tooltip {
-    position: absolute;
-    background: rgba(0, 0, 0, 0.9);
-    color: white;
-    padding: 6px 12px;
-    border-radius: 4px;
-    font-size: 13px;
-    font-weight: 500;
-    white-space: nowrap;
-    top: 120%;
-    left: 50%;
-    transform: translateX(-50%);
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.3s ease;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-}
-
-.course-badge:hover .badge-tooltip {
-    opacity: 1;
-    visibility: visible;
-}
-
-/* Style pour le responsive */
-@media (max-width: 767px) {
-    .card {
-        height: auto;
-    }
-    .card-body {
-        padding: 1rem;
-    }
-    .card-item {
-        height: auto;
-    }
-}
-
-/* Assurer une taille d'image uniforme */
-.card-img-top {
-    height: 200px;
-    object-fit: cover;
-    width: 100%;
-}
-
-/* Style pour les icônes d'action */
-.icon-element {
-    background: transparent !important;
-    box-shadow: none !important;
+    color: #b22222; /* Changement de couleur au survol */
 }
 </style>
 
