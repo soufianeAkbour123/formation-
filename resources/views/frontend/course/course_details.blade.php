@@ -901,25 +901,20 @@ document.addEventListener('DOMContentLoaded', function() {
                             
                         </a>
                         <div class="course-badge-labels">
-                        @if ($inscourse->bestseller == 1)
-                            <span class="course-badge bestseller-badge">
-                                <i class="la la-gem"></i>
-                                <span class="badge-tooltip">Meilleure vente</span>
-                            </span>
-                        @endif
+    @if ($inscourse->bestseller == 1)
+        <span class="course-badge bestseller-badge">
+            <i class="la la-gem"></i>
+            <span class="badge-tooltip">Meilleure vente</span>
+        </span>
+    @endif
 
-                        @if ($inscourse->discount_price == NULL)
-                            <span class="course-badge new-badge">
-                                <i class="la la-star"></i>
-                                <span class="badge-tooltip">Nouveau</span>
-                            </span>
-                        @else
-                            <span class="course-badge discount-badge">
-                                <i class="la la-tags"></i>
-                                <span class="badge-tooltip">{{ round($discount) }}% de réduction</span>
-                            </span>
-                        @endif
-                    </div>
+    @if ($inscourse->discount_price == NULL)
+        <span class="course-badge new-badge">
+            <i class="la la-star"></i>
+            <span class="badge-tooltip">Nouveau</span>
+        </span>
+    @endif
+</div>
                     </div><!-- end card-image -->
                     <div class="card-body">
                         <h6 class="ribbon ribbon-blue-bg fs-14 mb-3">
@@ -937,8 +932,11 @@ document.addEventListener('DOMContentLoaded', function() {
                             <a href="{{ url('course/details/'.$inscourse->id.'/'.$inscourse->course_name_slug) }}">{{ $inscourse->course_name }}</a>
                         </h5>
                         <p class="card-text">
-                            <a href="{{ route('instructor.details',$inscourse->instructor_id) }}">{{ $inscourse['user']['name'] }}</a>
-                        </p>
+    <a href="{{ route('instructor.details',$inscourse->instructor_id) }}">{{ $inscourse['user']['name'] }}</a>
+    @if ($inscourse->discount_price != NULL)
+        <span class="text-success ml-2">-{{ round($discount) }}%</span>
+    @endif
+</p>
                         <div class="rating-wrap d-flex align-items-center py-2">
                             <div class="review-stars">
                                 <span class="rating-number">{{ round($avarage,1) }}</span>
