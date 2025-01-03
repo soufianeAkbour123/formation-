@@ -295,7 +295,7 @@
       showSlide(currentSlide - 1);
     }
     
-    setInterval(nextSlide, 9000);
+    setInterval(nextSlide, 7000);
   </script>
 </body>
 </html>

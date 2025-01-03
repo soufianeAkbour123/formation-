@@ -259,7 +259,7 @@
         <p class="text">
           Devenez membre d'OpenSkillRoom et profitez des dernières expériences d'apprentissage adaptées à vos besoins
         </p>
-        <div class="">
+        <div class="btn-group">
           <a href="#" class="primary-btn">
             Rejoignez-nous
             <i class="la la-arrow-right icon"></i>
@@ -295,7 +295,7 @@
       showSlide(currentSlide - 1);
     }
     
-    setInterval(nextSlide, 9000);
+    setInterval(nextSlide, 7000);
   </script>
 </body>
 </html>

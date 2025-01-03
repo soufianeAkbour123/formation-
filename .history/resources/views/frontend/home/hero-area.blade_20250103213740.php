@@ -223,59 +223,48 @@
       <i class="arrow-icon right"></i>
     </button>
 
-    <div class="slider">
-  <button class="slider-arrow prev" onclick="prevSlide()">
-    <i class="arrow-icon left"></i>
-  </button>
-  <button class="slider-arrow next" onclick="nextSlide()">
-    <i class="arrow-icon right"></i>
-  </button>
-
-  <!-- Deuxième diapositive devient la première -->
-  <div class="slide active">
-    <div class="container">
-      <div class="content">
-        <h1 class="title">
-          Devenez membre<br>
-          OpenSkillRoom
-        </h1>
-        <p class="text">
-          OpenSkillRoom est une plateforme d'apprentissage au Maroc spécialisée dans les cours synchrones. 
-          Elle permet aux étudiants de participer en temps réel à des sessions interactives avec des instructeurs qualifiés.
-        </p>
-        <a href="#" class="primary-btn">Se Connecter / S'inscrire</a>
-      </div>
-      <div class="image-wrapper">
-        <img src="{{ asset('frontend/images/student-removebg-preview.png') }}" alt="Students studying online">
-      </div>
-    </div>
-  </div>
-
-  <!-- Première diapositive devient la deuxième -->
-  <div class="slide">
-    <div class="container">
-      <div class="content">
-        <h1 class="title">The ultimate experience</h1>
-        <p class="text">
-          Devenez membre d'OpenSkillRoom et profitez des dernières expériences d'apprentissage adaptées à vos besoins
-        </p>
-        <div class="">
-          <a href="#" class="primary-btn">
-            Rejoignez-nous
-            <i class="la la-arrow-right icon"></i>
-          </a>
-          <a href="https://www.youtube.com/embed/9tusoKSh0AU?si=34gz4OmOdTxqm2mh" class="secondary-btn video-play-btn">
-            Regarder l'aperçu<i class="la la-play icon-btn"></i>
-          </a>
+    <div class="slide">
+      <div class="container">
+        <div class="content">
+          <h1 class="title">The ultimate experience</h1>
+          <p class="text">
+            Devenez membre d'OpenSkillRoom et profitez des dernières expériences d'apprentissage adaptées à vos besoins
+          </p>
+          <div class="btn-group">
+            <a href="#" class="primary-btn">
+              Rejoignez-nous
+              <i class="la la-arrow-right icon"></i>
+            </a>
+            <a href="https://www.youtube.com/embed/9tusoKSh0AU?si=34gz4OmOdTxqm2mh" class="secondary-btn video-play-btn">
+              Regarder l'aperçu<i class="la la-play icon-btn"></i>
+            </a>
+          </div>
+        </div>
+        <div class="image-wrapper">
+          <img src="{{ asset('frontend/images/OSRlogo.png') }}" alt="OpenSkillRoom platform">
         </div>
       </div>
-      <div class="image-wrapper">
-        <img src="{{ asset('frontend/images/OSRlogo.png') }}" alt="OpenSkillRoom platform">
+    </div>
+
+    <div class="slide active">
+      <div class="container">
+        <div class="content">
+          <h1 class="title">
+            Devenez membre<br>
+            OpenSkillRoom
+          </h1>
+          <p class="text">
+            OpenSkillRoom est une plateforme d'apprentissage au Maroc spécialisée dans les cours synchrones. 
+            Elle permet aux étudiants de participer en temps réel à des sessions interactives avec des instructeurs qualifiés.
+          </p>
+          <a href="#" class="primary-btn">Se Connecter / S'inscrire</a>
+        </div>
+        <div class="image-wrapper">
+          <img src="{{ asset('frontend/images/student-removebg-preview.png') }}" alt="Students studying online">
+        </div>
       </div>
     </div>
   </div>
-</div>
-
   
   <script>
     const slides = document.querySelectorAll('.slide');
@@ -295,7 +284,7 @@
       showSlide(currentSlide - 1);
     }
     
-    setInterval(nextSlide, 9000);
+    setInterval(nextSlide, 7000);
   </script>
 </body>
 </html>
